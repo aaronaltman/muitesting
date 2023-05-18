@@ -12,6 +12,7 @@ const AaronHeroNew = () => {
                             marginTop:'85px',
                             paddingTop:'85px',
                             paddingBottom:'75px',
+                            maxWidth: '50%',
                         }}
                         >
                             <Image
@@ -26,8 +27,9 @@ const AaronHeroNew = () => {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Box sx={{
+                        marginTop:'85px',
                         paddingTop:'85px',
-                        paddingBottom:'40px',
+                        paddingBottom:'75px',
                     }}
                     >
                         <Typography variant="h2">Hero Section 2</Typography>
