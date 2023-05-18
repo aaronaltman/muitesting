@@ -14,7 +14,7 @@ const theme = createTheme({
         fontSize: 14,
         h1: {
             fontWeight: 700,
-            fontSize:'30px',
+            fontSize:'1.8rem',
         },
         h2: {
             fontWeight: 700,
@@ -30,7 +30,7 @@ const theme = createTheme({
         },
         h6: {
             fontWeight: 500,
-            fontSize:'1.5rem',
+            fontSize:'2rem',
         },
         subtitle1: {
             fontSize: 16,
