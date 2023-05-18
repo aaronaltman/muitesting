@@ -8,10 +8,9 @@ import ThemeStyles from 'components/ThemeStyles/ThemeStyles';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
-// Create a theme instance.
 const theme = createTheme({
     typography: {
-        fontFamily: '"Open Sans","sans-serif", "Helvetica", "Arial", sans-serif',
+        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
         fontSize: 14,
         h1: {
             fontWeight: 700,
@@ -19,9 +18,60 @@ const theme = createTheme({
         h2: {
             fontWeight: 700,
         },
-        // ...and so on for each typography variant
+        h3: {
+            fontWeight: 600,
+        },
+        h4: {
+            fontWeight: 600,
+        },
+        h5: {
+            fontWeight: 500,
+        },
+        h6: {
+            fontWeight: 500,
+        },
+        subtitle1: {
+            fontSize: 16,
+        },
+        subtitle2: {
+            fontSize: 14,
+        },
+        body1: {
+            fontSize: 16,
+        },
+        body2: {
+            fontSize: 14,
+        },
+        button: {
+            textTransform: 'none',
+        },
+        caption: {
+            fontSize: 12,
+        },
+        overline: {
+            fontSize: 10,
+        },
     },
-});
+    components: {
+        MuiMenuItem: {
+            styleOverrides: {
+                root: {
+                    color: '#333',
+                    '&:hover': {
+                        backgroundColor: '#f5f5f5',
+                    },
+                    '&.Mui-selected': {
+                        backgroundColor: '#ddd',
+                    },
+                    '&.Mui-selected:hover': {
+                        backgroundColor: '#ccc',
+                    },
+                },
+            },
+        },
+    },
+},
+);
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
