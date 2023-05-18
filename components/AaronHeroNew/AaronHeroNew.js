@@ -9,11 +9,8 @@ const AaronHeroNew = () => {
                 <Grid item xs={12} md={6}>
                     <Paper elevation={3}>
                         <Box sx={{
-                            paddingTop:'75px',
+                            paddingTop:'85px',
                             paddingBottom:'75px',
-                            pl:'24px',
-                            pr:'24px',
-
                         }}
                         >
                             <Image
@@ -27,7 +24,11 @@ const AaronHeroNew = () => {
                     </Paper>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <Box>
+                    <Box sx={{
+                        paddingTop:'85px',
+                        paddingBottom:'40px',
+                    }}
+                    >
                         <Typography variant="h2">Hero Section 2</Typography>
                         <Typography variant="body1">Content for hero section 2...</Typography>
                     </Box>
