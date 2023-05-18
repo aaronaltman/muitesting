@@ -18,6 +18,7 @@ import {
 import { BlogInfoFragment } from 'fragments/GeneralSettings';
 
 import AaronHeader from "../components/AaronHeader/AaronHeader";
+import AaronHeroNew from "../components/AaronHeroNew/AaronHeroNew";
 
 const postsPerPage = 3;
 
@@ -44,7 +45,7 @@ export default function Component() {
       <SEO title={siteTitle} description={siteDescription} />
 
       <AaronHeader menu={primaryMenu} />
-
+      <AaronHeroNew />
 
       <Main className={styles.home}>
         <EntryHeader image={mainBanner} />
