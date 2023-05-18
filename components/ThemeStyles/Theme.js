@@ -74,6 +74,9 @@ const theme = createTheme({
             },
         },
         MuiToolbar: {
+            defaultProps: {
+                padding: false,
+            },
             styleOverrides: {
                 root: {
                     padding: 0,
@@ -91,7 +94,6 @@ const theme = createTheme({
                 },
             },
         },
-        // other component overrides...
     },
     // other theme settings...
     overrides: {
