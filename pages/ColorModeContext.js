@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 
-// Create and export the context
 export const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
 function ColorModeContextProvider({ children }) {
-    // You might want to add state here to manage the color mode
+    const [mode, setMode] = useState('light');
+
+    const colorMode = useMemo(
+        () => ({
+            toggleColorMode: () => {
+                setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+            },
+        }),
+        [],
+    );
 
     return (
-        <ColorModeContext.Provider value={{ toggleColorMode: () => {} }}>
+        <ColorModeContext.Provider value={colorMode}>
             {children}
         </ColorModeContext.Provider>
     );
 }
 
 export default ColorModeContextProvider;
-

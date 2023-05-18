@@ -2,20 +2,13 @@ import React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
-import { ColorModeContext } from './ColorModeContext';
+import AaronHeader from '../components/AaronHeader/AaronHeader.js';
 
-import AaronHeader from '/components/AaronHeader/AaronHeader.js';
+import ColorModeContextProvider from './ColorModeContext';
+
 
 function App() {
-    const [mode, setMode] = React.useState('light');
-    const colorMode = React.useMemo(
-        () => ({
-            toggleColorMode: () => {
-                setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
-            },
-        }),
-        [],
-    );
+    const [mode] = React.useState('light');
 
     const theme = React.useMemo(
         () =>
@@ -104,13 +97,13 @@ function App() {
     ];
 
     return (
-        <ColorModeContext.Provider value={colorMode}>
+        <ColorModeContextProvider>
             <ThemeProvider theme={theme}>
                 <CssBaseline />
                 <AaronHeader menu={menuItems} />
                 {/* other components */}
             </ThemeProvider>
-        </ColorModeContext.Provider>
+        </ColorModeContextProvider>
     );
 }
 
