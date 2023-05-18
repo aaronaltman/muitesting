@@ -5,6 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import AaronHeader from '../components/AaronHeader/AaronHeader.js';
 
 import ColorModeContextProvider from './ColorModeContext';
+import {FaustProvider} from "@faustwp/core";
 
 
 function App() {
