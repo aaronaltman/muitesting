@@ -45,6 +45,7 @@ export default function Component() {
 
       <AaronHeader menu={primaryMenu} />
 
+
       <Main className={styles.home}>
         <EntryHeader image={mainBanner} />
         <div className="container">

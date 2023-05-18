@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 
 function AaronHeader(props) {
     return (
-        <AppBar position="static">
+        <AppBar position="fixed">
             <Container maxWidth="xl">
                 <Toolbar>
                     <Box display="flex" justifyContent="space-between" width="100%">
