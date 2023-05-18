@@ -8,13 +8,12 @@ import ThemeStyles from 'components/ThemeStyles/ThemeStyles';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
+
+
 const theme = createTheme({
     typography: {
         fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
         fontSize: 14,
-        palette: {
-            mode: 'dark',
-        },
         h1: {
             fontWeight: 700,
             fontSize:'1.8rem',
@@ -57,6 +56,9 @@ const theme = createTheme({
             fontSize: 10,
         },
     },
+    palette: {
+        mode: 'dark',
+    },
     components: {
         MuiMenuItem: {
             styleOverrides: {
@@ -74,9 +76,16 @@ const theme = createTheme({
                 },
             },
         },
+        MuiToolbar: {
+            styleOverrides: {
+                root: {
+                    padding: 0,
+                },
+            },
+        },
     },
-},
-);
+});
+
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();

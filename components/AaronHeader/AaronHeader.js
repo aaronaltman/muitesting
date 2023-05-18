@@ -1,32 +1,36 @@
-import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import MenuItem from '@mui/material/MenuItem';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
+import React, { useContext } from 'react';
+
+import { ColorModeContext } from '/pages/ColorModeContext';
+
+import IconButton from '@mui/material/IconButton';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import AppBar from "@mui/material/AppBar";
+import {Box, Container, Typography} from "@mui/material";
+import Toolbar from "@mui/material/Toolbar";
+import MenuItem from "@mui/material/MenuItem";
 
 function AaronHeader(props) {
+    const { toggleColorMode } = useContext(ColorModeContext);
+
     return (
         <>
-        <AppBar position="fixed">
-            <Container maxWidth="xl">
-                <Toolbar>
-                    <Box display="flex" justifyContent="space-between" width="100%">
-                        <Typography variant="h6">
-                            Header Title
-                        </Typography>
-                        <Box display="flex">
-                            {props.menu.map((item) => (
-                                <MenuItem key={item.id}>
-                                    {item.label}
-                                </MenuItem>
-                            ))}
+            <AppBar position="fixed">
+                <Container maxWidth="xl">
+                    <Toolbar>
+                        <Box display="flex" justifyContent="space-between" width="100%">
+                            <Typography variant="h6">Header Title</Typography>
+                            <Box display="flex">
+                                {props.menu.map((item) => (
+                                    <MenuItem key={item.id}>{item.label}</MenuItem>
+                                ))}
+                                <IconButton onClick={toggleColorMode} color="inherit">
+                                    <Brightness4Icon />
+                                </IconButton>
+                            </Box>
                         </Box>
-                    </Box>
-                </Toolbar>
-            </Container>
-        </AppBar>
+                    </Toolbar>
+                </Container>
+            </AppBar>
         </>
     );
 }
