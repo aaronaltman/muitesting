@@ -16,7 +16,7 @@ const theme = createTheme({
         // other palette settings...
     },
     typography: {
-        fontFamily: 'Roboto, sans-serif',
+        fontFamily: 'Open Sans, sans-serif',
         h1: {
             fontSize: '2.5rem',
             fontWeight: 500,
@@ -29,6 +29,21 @@ const theme = createTheme({
         // other shape settings...
     },
     components: {
+        MuiTypography: {
+            styleOverrides: {
+                root: {
+                    fontFamily:'Open Sans, sans-serif',
+                    fontSize:'3rem',
+                },
+            },
+        },
+        MuiMenuItem: {
+            styleOverrides: {
+                root: {
+                    // your MenuItem overrides...
+                },
+            },
+        },
         MuiButton: {
             styleOverrides: {
                 root: {
@@ -48,7 +63,8 @@ const theme = createTheme({
         MuiToolbar: {
             styleOverrides: {
                 root: {
-                    padding: 0, // Remove padding from the toolbar
+                    padding: 0,
+                    // other Toolbar overrides...
                 },
             },
         },
