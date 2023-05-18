@@ -1,102 +1,117 @@
-import '../faust.config';
 import React from 'react';
-import { useRouter } from 'next/router';
-import { FaustProvider } from '@faustwp/core';
-import 'normalize.css/normalize.css';
-import '../styles/main.scss';
-import ThemeStyles from 'components/ThemeStyles/ThemeStyles';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
+import { ColorModeContext } from './ColorModeContext';
 
+import AaronHeader from '/components/AaronHeader/AaronHeader.js';
 
-const theme = createTheme({
-    typography: {
-        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-        fontSize: 14,
-        h1: {
-            fontWeight: 700,
-            fontSize:'1.8rem',
-        },
-        h2: {
-            fontWeight: 700,
-        },
-        h3: {
-            fontWeight: 600,
-        },
-        h4: {
-            fontWeight: 600,
-        },
-        h5: {
-            fontWeight: 500,
-        },
-        h6: {
-            fontWeight: 500,
-            fontSize:'2.5rem',
-        },
-        subtitle1: {
-            fontSize: 16,
-        },
-        subtitle2: {
-            fontSize: 14,
-        },
-        body1: {
-            fontSize: 16,
-        },
-        body2: {
-            fontSize: 14,
-        },
-        button: {
-            textTransform: 'none',
-        },
-        caption: {
-            fontSize: 12,
-        },
-        overline: {
-            fontSize: 10,
-        },
-    },
-    palette: {
-        mode: 'dark',
-    },
-    components: {
-        MuiMenuItem: {
-            styleOverrides: {
-                root: {
-                    color: '#333',
-                    '&:hover': {
-                        backgroundColor: '#f5f5f5',
+function App() {
+    const [mode, setMode] = React.useState('light');
+    const colorMode = React.useMemo(
+        () => ({
+            toggleColorMode: () => {
+                setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+            },
+        }),
+        [],
+    );
+
+    const theme = React.useMemo(
+        () =>
+            createTheme({
+                palette: {
+                    mode,
+                },
+                typography: {
+                    fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
+                    fontSize: 14,
+                    h1: {
+                        fontWeight: 700,
+                        fontSize:'1.8rem',
                     },
-                    '&.Mui-selected': {
-                        backgroundColor: '#ddd',
+                    h2: {
+                        fontWeight: 700,
                     },
-                    '&.Mui-selected:hover': {
-                        backgroundColor: '#ccc',
+                    h3: {
+                        fontWeight: 600,
+                    },
+                    h4: {
+                        fontWeight: 600,
+                    },
+                    h5: {
+                        fontWeight: 500,
+                    },
+                    h6: {
+                        fontWeight: 500,
+                        fontSize:'2.5rem',
+                    },
+                    subtitle1: {
+                        fontSize: 16,
+                    },
+                    subtitle2: {
+                        fontSize: 14,
+                    },
+                    body1: {
+                        fontSize: 16,
+                    },
+                    body2: {
+                        fontSize: 14,
+                    },
+                    button: {
+                        textTransform: 'none',
+                    },
+                    caption: {
+                        fontSize: 12,
+                    },
+                    overline: {
+                        fontSize: 10,
                     },
                 },
-            },
-        },
-        MuiToolbar: {
-            styleOverrides: {
-                root: {
-                    padding: 0,
+                components: {
+                    MuiMenuItem: {
+                        styleOverrides: {
+                            root: {
+                                color: '#333',
+                                '&:hover': {
+                                    backgroundColor: '#f5f5f5',
+                                },
+                                '&.Mui-selected': {
+                                    backgroundColor: '#ddd',
+                                },
+                                '&.Mui-selected:hover': {
+                                    backgroundColor: '#ccc',
+                                },
+                            },
+                        },
+                    },
+                    MuiToolbar: {
+                        styleOverrides: {
+                            root: {
+                                padding: 0,
+                            },
+                        },
+                    },
                 },
-            },
-        },
-    },
-});
+            }),
+        [mode],
+    );
 
-
-export default function MyApp({ Component, pageProps }) {
-    const router = useRouter();
+    const menuItems = [
+        { id: 1, label: 'Home' },
+        { id: 2, label: 'About' },
+        // other menu items...
+    ];
 
     return (
-        <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <ThemeStyles />
-            <FaustProvider pageProps={pageProps}>
-                <Component {...pageProps} key={router.asPath} />
-            </FaustProvider>
-        </ThemeProvider>
+        <ColorModeContext.Provider value={colorMode}>
+            <ThemeProvider theme={theme}>
+                <CssBaseline />
+                <AaronHeader menu={menuItems} />
+                {/* other components */}
+            </ThemeProvider>
+        </ColorModeContext.Provider>
     );
 }
+
+export default App;
