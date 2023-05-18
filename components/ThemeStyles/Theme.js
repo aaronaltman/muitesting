@@ -22,9 +22,6 @@ const theme = createTheme({
             fontWeight: 500,
             // other h1 settings...
         },
-        h6:{
-            fontSize:'100px',
-        }
         // other typography settings...
     },
     shape: {
@@ -35,7 +32,7 @@ const theme = createTheme({
         MuiTypography: {
             styleOverrides: {
                 root: {
-                    fontFamily:'Open Sans, sans-serif',
+                    // your Typography overrides...
                 },
             },
         },
@@ -70,9 +67,29 @@ const theme = createTheme({
                 },
             },
         },
+        MuiCssBaseline: {
+            styleOverrides: {
+                '@global': {
+                    '.css-bfldy9': {
+                        paddingLeft: 0,
+                        paddingRight: 0,
+                    },
+                },
+            },
+        },
         // other component overrides...
     },
     // other theme settings...
+    overrides: {
+        MuiCssBaseline: {
+            '@global': {
+                '.css-bfldy9': {
+                    paddingLeft: 0,
+                    paddingRight: 0,
+                },
+            },
+        },
+    },
 });
 
 export default theme;
