@@ -101,7 +101,6 @@ function App() {
             <ThemeProvider theme={theme}>
                 <CssBaseline />
                 <AaronHeader menu={menuItems} />
-                {/* other components */}
             </ThemeProvider>
         </ColorModeContextProvider>
     );
