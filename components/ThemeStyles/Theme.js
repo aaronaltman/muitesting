@@ -22,6 +22,9 @@ const theme = createTheme({
             fontWeight: 500,
             // other h1 settings...
         },
+        h6:{
+            fontSize:'100px',
+        }
         // other typography settings...
     },
     shape: {
@@ -33,7 +36,6 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     fontFamily:'Open Sans, sans-serif',
-                    fontSize:'3rem',
                 },
             },
         },
