@@ -50,23 +50,6 @@ export default function Component() {
       <Main className={styles.home}>
         <EntryHeader image={mainBanner} />
         <div className="container">
-          <section className="hero text-center">
-            <Heading className={styles.heading} level="h1">
-              Welcome to your Blueprint
-            </Heading>
-            <p className={styles.description}>
-              Achieve unprecedented performance with modern frameworks and the
-              world&apos;s #1 open source CMS in one powerful headless platform.{' '}
-            </p>
-            <div className={styles.actions}>
-              <Button styleType="secondary" href="/contact-us">
-                GET STARTED
-              </Button>
-              <Button styleType="primary" href="/about">
-                LEARN MORE
-              </Button>
-            </div>
-          </section>
           <section className="cta">
             <CTA
               Button={() => (
