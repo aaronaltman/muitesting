@@ -4,17 +4,22 @@ import { useRouter } from 'next/router';
 import { FaustProvider } from '@faustwp/core';
 import 'normalize.css/normalize.css';
 import '../styles/main.scss';
-import ThemeStyles from 'components/ThemeStyles/ThemeStyles';
+import {CssBaseline, ThemeProvider} from "@mui/material";
+
+import theme from '/components/ThemeStyles/Theme.js';
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
 
     return (
         <>
-            <ThemeStyles />
+            <ThemeProvider theme={theme}>
+                <CssBaseline >
             <FaustProvider pageProps={pageProps}>
                 <Component {...pageProps} key={router.asPath} />
             </FaustProvider>
+            </CssBaseline>
+            </ThemeProvider>
         </>
     );
 }
