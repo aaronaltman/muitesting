@@ -12,6 +12,9 @@ const theme = createTheme({
     typography: {
         fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
         fontSize: 14,
+        palette: {
+            mode: 'dark',
+        },
         h1: {
             fontWeight: 700,
             fontSize:'1.8rem',

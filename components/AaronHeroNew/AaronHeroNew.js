@@ -9,6 +9,7 @@ const AaronHeroNew = () => {
                 <Grid item xs={12} md={6}>
                     <Paper elevation={3}>
                         <Box sx={{
+                            marginTop:'85px',
                             paddingTop:'85px',
                             paddingBottom:'75px',
                         }}
