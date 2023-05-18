@@ -11,7 +11,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 // Create a theme instance.
 const theme = createTheme({
     typography: {
-        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+        fontFamily: '"Open Sans","sans-serif", "Helvetica", "Arial", sans-serif',
         fontSize: 14,
         h1: {
             fontWeight: 700,
