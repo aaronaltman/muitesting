@@ -11,12 +11,13 @@ import {
   CTA,
   NavigationMenu,
   SEO,
-  Header,
   Footer,
   Posts,
   Testimonials,
 } from 'components';
 import { BlogInfoFragment } from 'fragments/GeneralSettings';
+
+import AaronHeader from "../components/AaronHeader/AaronHeader";
 
 const postsPerPage = 3;
 
@@ -42,11 +43,7 @@ export default function Component() {
     <>
       <SEO title={siteTitle} description={siteDescription} />
 
-      <Header
-        title={siteTitle}
-        description={siteDescription}
-        menuItems={primaryMenu}
-      />
+      <AaronHeader menu={primaryMenu} />
 
       <Main className={styles.home}>
         <EntryHeader image={mainBanner} />
