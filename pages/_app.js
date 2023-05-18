@@ -1,74 +1,20 @@
-import * as React from 'react';
-import IconButton from '@mui/material/IconButton';
-import Box from '@mui/material/Box';
-import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
 import '../faust.config';
+import React from 'react';
 import { useRouter } from 'next/router';
 import { FaustProvider } from '@faustwp/core';
 import 'normalize.css/normalize.css';
 import '../styles/main.scss';
 import ThemeStyles from 'components/ThemeStyles/ThemeStyles';
 
-const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
-
-function MyApp({ Component, pageProps }) {
-    const theme = useTheme();
-    const colorMode = React.useContext(ColorModeContext);
+export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
 
     return (
-        <Box
-            sx={{
-                display: 'flex',
-                width: '100%',
-                alignItems: 'center',
-                justifyContent: 'center',
-                bgcolor: 'background.default',
-                color: 'text.primary',
-                borderRadius: 1,
-                p: 3,
-            }}
-        >
-            {theme.palette.mode} mode
-            <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
-                {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
-            </IconButton>
+        <>
+            <ThemeStyles />
             <FaustProvider pageProps={pageProps}>
                 <Component {...pageProps} key={router.asPath} />
             </FaustProvider>
-        </Box>
-    );
-}
-
-export default function ToggleColorMode({ Component, pageProps }) {
-    const [mode, setMode] = React.useState('light');
-    const colorMode = React.useMemo(
-        () => ({
-            toggleColorMode: () => {
-                setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
-            },
-        }),
-        [],
-    );
-
-    const theme = React.useMemo(
-        () =>
-            createTheme({
-                palette: {
-                    mode,
-                },
-            }),
-        [mode],
-    );
-
-    return (
-        <ColorModeContext.Provider value={colorMode}>
-            <ThemeProvider theme={theme}>
-                <ThemeStyles />
-                <MyApp Component={Component} pageProps={pageProps} />
-            </ThemeProvider>
-        </ColorModeContext.Provider>
+        </>
     );
 }
