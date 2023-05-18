@@ -8,7 +8,14 @@ const AaronHeroNew = () => {
             <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>
                     <Paper elevation={3}>
-                        <Box>
+                        <Box sx={{
+                            paddingTop:'75px',
+                            paddingBottom:'75px',
+                            pl:'24px',
+                            pr:'24px',
+
+                        }}
+                        >
                             <Image
                                 src="https://bpmuitesting.wpengine.com/wp-content/uploads/2023/05/acm-blueprint/media/379/Screen-Shot-2022-03-09-at-10.57.17.jpeg" // Path to your image
                                 alt="Hero"
