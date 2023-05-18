@@ -22,6 +22,20 @@ const theme = createTheme({
             fontWeight: 500,
             // other h1 settings...
         },
+        h6:{
+            fontSize:'1.9rem',
+            fontWeight:'bold',
+
+        },
+        body1:{
+            fontSize:'1.9rem',
+            color:'#333',
+        },
+        body2:{
+            fontSize:'2.2rem',
+            fontWeight:'bold',
+
+        },
         // other typography settings...
     },
     shape: {
