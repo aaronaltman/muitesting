@@ -15,7 +15,14 @@ function AaronHeader(props) {
         <>
             <AppBar position="fixed">
                 <Container maxWidth="xl">
-                        <Box display="flex" justifyContent="space-between" width="100%">
+                        <Box display="flex"
+                             justifyContent="space-between"
+                             width="100%"
+                             sx={{
+                                 pt:'20px',
+                                 pb:'20px',
+                             }}
+                        >
                             <Typography variant="h6">Header Title</Typography>
                             <Box display="flex">
                                 {props.menu.map((item) => (
