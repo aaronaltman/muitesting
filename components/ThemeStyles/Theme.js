@@ -36,6 +36,9 @@ const theme = createTheme({
             fontWeight:'bold',
 
         },
+        MenuItem:{
+            color:'white',
+        },
         // other typography settings...
     },
     shape: {
