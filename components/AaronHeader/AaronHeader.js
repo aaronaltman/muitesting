@@ -6,7 +6,6 @@ import IconButton from '@mui/material/IconButton';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import AppBar from "@mui/material/AppBar";
 import {Box, Container, Typography} from "@mui/material";
-import Toolbar from "@mui/material/Toolbar";
 import MenuItem from "@mui/material/MenuItem";
 
 function AaronHeader(props) {
@@ -16,7 +15,6 @@ function AaronHeader(props) {
         <>
             <AppBar position="fixed">
                 <Container maxWidth="xl">
-                    <Toolbar>
                         <Box display="flex" justifyContent="space-between" width="100%">
                             <Typography variant="h6">Header Title</Typography>
                             <Box display="flex">
@@ -28,7 +26,6 @@ function AaronHeader(props) {
                                 </IconButton>
                             </Box>
                         </Box>
-                    </Toolbar>
                 </Container>
             </AppBar>
         </>
