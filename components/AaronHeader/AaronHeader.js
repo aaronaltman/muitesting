@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
+import { useScrollPosition } from 'react-use-scroll-position';
 
 import { ColorModeContext } from '/pages/ColorModeContext';
 
@@ -10,6 +11,16 @@ import MenuItem from "@mui/material/MenuItem";
 
 function AaronHeader(props) {
     const { toggleColorMode } = useContext(ColorModeContext);
+    const [headerSize, setHeaderSize] = useState('40px');
+    const scrollPosition = useScrollPosition();
+
+    useEffect(() => {
+        if (scrollPosition.y > 50) {
+            setHeaderSize('20px');
+        } else {
+            setHeaderSize('40px');
+        }
+    }, [scrollPosition]);
 
     return (
         <>
@@ -20,8 +31,8 @@ function AaronHeader(props) {
                              justifyContent="space-between"
                              width="100%"
                              sx={{
-                                 pt:'20px',
-                                 pb:'20px',
+                                 pt: headerSize,
+                                 pb: headerSize,
                                  alignItems:'center',
                              }}
                         >
