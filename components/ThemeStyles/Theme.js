@@ -82,7 +82,8 @@ const theme = createTheme({
             },
             styleOverrides: {
                 root: {
-                    padding: 0,
+                    paddingLeft: 0,
+                    paddingRight:0,
                     // other Toolbar overrides...
                 },
             },
