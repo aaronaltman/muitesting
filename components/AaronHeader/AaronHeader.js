@@ -21,6 +21,7 @@ function AaronHeader(props) {
                              sx={{
                                  pt:'20px',
                                  pb:'20px',
+                                 alignItems:'center',
                              }}
                         >
                             <Typography variant="h6">Header Title</Typography>
