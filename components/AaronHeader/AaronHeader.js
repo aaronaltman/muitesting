@@ -16,9 +16,9 @@ function AaronHeader(props) {
 
     useEffect(() => {
         if (scrollPosition.y > 50) {
-            setHeaderSize('20px');
+            setHeaderSize('15px');
         } else {
-            setHeaderSize('40px');
+            setHeaderSize('30px');
         }
     }, [scrollPosition]);
 
