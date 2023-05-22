@@ -15,11 +15,13 @@ import {
   Testimonials,
 } from 'components';
 import { BlogInfoFragment } from 'fragments/GeneralSettings';
+import {Container} from "@mui/material";
 
 import AaronHeroNew from "../components/AaronHeroNew/AaronHeroNew";
 import TopNav from "../src/components/TopNav";
 
 import Topbar from '/src/layouts/Fixed/components/Topbar/Topbar.js';
+
 
 const postsPerPage = 3;
 
@@ -39,10 +41,11 @@ export default function Component() {
   return (
     <>
       <SEO title={siteTitle} description={siteDescription} />
+<Container maxWidth={xl}>
       <TopNav />
       <Topbar />
       <AaronHeroNew />
-
+</Container>
 
       <Main className={styles.home}>
         <div className="container">
