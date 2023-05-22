@@ -21,8 +21,6 @@ import TopNav from "../src/components/TopNav";
 
 import Topbar from '/src/layouts/Fixed/components/Topbar/Topbar.js';
 
-import HeroWithIllustrationAndCta from "../components/Heroes";
-
 
 const postsPerPage = 3;
 
@@ -45,7 +43,6 @@ export default function Component() {
 <Container maxWidth={'xl'}>
       <TopNav />
       <Topbar />
-      <HeroWithIllustrationAndCta />
 </Container>
 
       <Main className={styles.home}>
