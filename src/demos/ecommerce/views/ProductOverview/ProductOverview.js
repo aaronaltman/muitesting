@@ -41,7 +41,7 @@ const ProductOverview = () => {
         <Box>
           <Grid container spacing={{ xs: 2, md: 4 }}>
             <Grid item xs={12} md={7}>
-              <Image images={mock.images} title={mock.title} />
+              <Image alt={'hello world'} images={mock.images} title={mock.title} />
             </Grid>
             <Grid item xs={12} md={5}>
               <Details

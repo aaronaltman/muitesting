@@ -153,10 +153,6 @@ const Demos = () => {
                     position: 'absolute',
                     width: 1,
                     height: 1,
-                    bgcolor:
-                      theme.palette.mode === 'dark'
-                        ? alpha(colors[item.bgcolor][50], 0.5)
-                        : colors[item.bgcolor][50],
                     borderRadius: 2,
                     zIndex: 1,
                     top: {

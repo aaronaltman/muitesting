@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Dialog from '@mui/material/Dialog';
+import Image from 'next/Image';
 
 import { Details } from './components';
 
@@ -51,7 +52,7 @@ const ProductQuickViewDialog = ({ onClose, open, imageSrc, details }) => {
                   },
                 }}
               >
-                <img src={imageSrc} alt={details.title} loading={'lazy'} />
+                <Image src={imageSrc} alt={details.title} loading={'lazy'} />
               </Box>
             </Grid>
             <Grid item container xs={12} md={6} alignItems={'center'}>

@@ -7,6 +7,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import Image from 'next/Image';
 
 const mock = [
   {
@@ -83,7 +84,7 @@ const Categories = () => {
             >
               {item.images.map((image, j) => (
                 <ImageListItem key={j} cols={1} rows={j === 0 ? 2 : 1}>
-                  <img
+                  <Image
                     src={image.src}
                     alt={image.title}
                     loading="lazy"
