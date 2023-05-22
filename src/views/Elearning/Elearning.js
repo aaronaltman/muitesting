@@ -10,8 +10,6 @@ import {
   Courses,
   Hero,
   PromoNumbers,
-  Reviews,
-  Subscription,
 } from '/src/views/Elearning/components';
 
 const Elearning = () => {
@@ -54,18 +52,12 @@ const Elearning = () => {
           ></path>
         </Box>
       </Box>
-      <Container>
-        <Reviews />
-      </Container>
       <Box
         sx={{
           background: 'transparent',
           backgroundImage: `linear-gradient(180deg, ${theme.palette.background.paper} 40%, ${theme.palette.primary.main} 0%)`,
         }}
       >
-        <Container>
-          <Subscription />
-        </Container>
       </Box>
     </Main>
   );
