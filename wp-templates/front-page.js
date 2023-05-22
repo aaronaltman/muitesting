@@ -21,7 +21,7 @@ import TopNav from "../src/components/TopNav";
 
 import Topbar from '/src/layouts/Fixed/components/Topbar/Topbar.js';
 
-import {BlogCardsWithFullBackgroundImage} from "../src/blocks/blog";
+import BlogCardsWithFullBackgroundImage from "../src/blocks/blog/BlogCardsWithFullBackgroundImage";
 
 
 const postsPerPage = 3;
@@ -45,7 +45,7 @@ export default function Component() {
 <Container maxWidth={'xl'}>
       <TopNav />
       <Topbar />
-  <BlogCardsWithFullBackgroundImage/>
+  <BlogCardsWithFullBackgroundImage />
 </Container>
 
       <Main className={styles.home}>
