@@ -47,7 +47,7 @@ const Topbar = ({ onSidebarOpen }) => {
           <Link
             underline="none"
             component="a"
-            href="/Users/aaronkuniansky-altman/Desktop/thefront-main/nextjs/src/pages/home"
+            href="/src/pages/home"
             color="text.primary"
           >
             Pages
@@ -57,7 +57,7 @@ const Topbar = ({ onSidebarOpen }) => {
           <Link
             underline="none"
             component="a"
-            href="/Users/aaronkuniansky-altman/Desktop/thefront-main/nextjs/src/pages/blocks"
+            href="/src/pages/blocks"
             color="text.primary"
           >
             Components
@@ -67,7 +67,7 @@ const Topbar = ({ onSidebarOpen }) => {
           <Link
             underline="none"
             component="a"
-            href="/Users/aaronkuniansky-altman/Desktop/thefront-main/nextjs/src/pages/demos"
+            href="/src/pages/demos"
             color="text.primary"
           >
             Demos

@@ -19,6 +19,8 @@ import { BlogInfoFragment } from 'fragments/GeneralSettings';
 import AaronHeroNew from "../components/AaronHeroNew/AaronHeroNew";
 import TopNav from "../src/components/TopNav";
 
+import Topbar from '/src/layouts/Fixed/components/Topbar/Topbar.js';
+
 const postsPerPage = 3;
 
 export default function Component() {
@@ -38,6 +40,7 @@ export default function Component() {
     <>
       <SEO title={siteTitle} description={siteDescription} />
       <TopNav />
+      <Topbar />
       <AaronHeroNew />
 
 
