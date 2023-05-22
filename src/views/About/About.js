@@ -4,7 +4,6 @@ import Divider from '@mui/material/Divider';
 
 import Main from '/src/layouts/Main';
 import Container from '/src/components/Container';
-
 import {
   Contact,
   Gallery,
@@ -14,7 +13,7 @@ import {
   Team,
   WhoWeAre,
   Application,
-} from './components';
+} from '/src/views/About/components';
 
 const About = () => {
   return (
