@@ -9,7 +9,6 @@ import {
   Testimonials,
 } from 'components';
 import { BlogInfoFragment } from 'fragments/GeneralSettings';
-import {Container} from "@mui/material";
 
 import Elearning from '/src/views/Elearning';
 import Page from "/src/components/Page.js";
@@ -36,9 +35,7 @@ export default function Component() {
       <SEO title={siteTitle} description={siteDescription} />
 
       <Main>
-        <Container maxWidth={'xl'}>
           <Elearning />
-        </Container>
 
       </Main>
       </Page>
