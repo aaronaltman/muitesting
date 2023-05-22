@@ -16,7 +16,6 @@ import TopNav from "../src/components/TopNav";
 
 import Topbar from '/src/layouts/Fixed/components/Topbar/Topbar.js';
 
-import BlogCardsWithFullBackgroundImage from "../src/blocks/blog/BlogCardsWithFullBackgroundImage";
 import SimpleHeroWithImageAndCtaButtons from "../src/blocks/heroes/SimpleHeroWithImageAndCtaButtons";
 
 
@@ -44,7 +43,6 @@ export default function Component() {
           <TopNav />
           <Topbar />
           <SimpleHeroWithImageAndCtaButtons />
-          <BlogCardsWithFullBackgroundImage />
         </Container>
 
       </Main>
