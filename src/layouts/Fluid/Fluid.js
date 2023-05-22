@@ -11,8 +11,8 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Zoom from '@mui/material/Zoom';
 import NoSsr from '@mui/material/NoSsr';
 
-import Container from 'components/Container';
-import TopNav from 'components/TopNav';
+import Container from '/src/components/Container';
+import TopNav from '/src/components/TopNav';
 
 import { Footer } from './components';
 

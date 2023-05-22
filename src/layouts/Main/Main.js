@@ -7,12 +7,13 @@ import Divider from '@mui/material/Divider';
 import AppBar from '@mui/material/AppBar';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
-import Container from 'components/Container';
-import TopNav from 'components/TopNav';
+import Container from '/src/components/Container';
+import TopNav from '/src/components/TopNav';
+
+import pages from '../navigation';
 
 import { Topbar, Sidebar, Footer } from './components';
 
-import pages from '../navigation';
 
 const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
   const theme = useTheme();
