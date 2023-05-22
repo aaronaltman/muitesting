@@ -4,10 +4,12 @@ import single from './single';
 import project from './project';
 import archive from './archive';
 
-export default {
+const exports = {
   'front-page': frontPage,
   page,
   single,
   project,
   archive,
 };
+
+export default exports;

@@ -44,7 +44,7 @@ const ResizableFrame = ({ src, title, path, iframeStyles = {}, ...rest }) => {
 
   useEffect(() => {
     setRandom(random + 1);
-  }, [theme.palette.mode]);
+  }, [theme.palette.mode, random]);
 
   const handleResizeBtnClick = (width) => {
     if (width === viewportWidth) {
