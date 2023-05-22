@@ -16,9 +16,8 @@ import {
 } from 'components';
 import { BlogInfoFragment } from 'fragments/GeneralSettings';
 
-import AaronHeader from "../components/AaronHeader/AaronHeader";
 import AaronHeroNew from "../components/AaronHeroNew/AaronHeroNew";
-import TopNav from "../src/components/TopNav";
+import {Topbar} from "../src/layouts/Main/components";
 
 const postsPerPage = 3;
 
@@ -32,16 +31,15 @@ export default function Component() {
 
   const { title: siteTitle, description: siteDescription } =
     data?.generalSettings;
-  const primaryMenu = data?.headerMenuItems?.nodes ?? [];
+  //const primaryMenu = data?.headerMenuItems?.nodes ?? [];
   const footerMenu = data?.footerMenuItems?.nodes ?? [];
 
   return (
     <>
       <SEO title={siteTitle} description={siteDescription} />
-
-      <AaronHeader menu={primaryMenu} />
+      <Topbar />
       <AaronHeroNew />
-      <TopNav />
+
 
       <Main className={styles.home}>
         <div className="container">
