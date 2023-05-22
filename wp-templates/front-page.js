@@ -5,7 +5,6 @@ import {
   Main,
   NavigationMenu,
   SEO,
-  Footer,
   Posts,
   Testimonials,
 } from 'components';
@@ -29,7 +28,7 @@ export default function Component() {
   const { title: siteTitle, description: siteDescription } =
     data?.generalSettings;
   //const primaryMenu = data?.headerMenuItems?.nodes ?? [];
-  const footerMenu = data?.footerMenuItems?.nodes ?? [];
+  //const footerMenu = data?.footerMenuItems?.nodes ?? [];
 
   return (
     <>
@@ -42,7 +41,6 @@ export default function Component() {
         </Container>
 
       </Main>
-      <Footer menuItems={footerMenu} />
       </Page>
     </>
   );
