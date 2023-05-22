@@ -17,6 +17,7 @@ import TopNav from "../src/components/TopNav";
 import Topbar from '/src/layouts/Fixed/components/Topbar/Topbar.js';
 
 import SimpleHeroWithImageAndCtaButtons from "../src/blocks/heroes/SimpleHeroWithImageAndCtaButtons";
+import CtaWithIllustration from "../src/blocks/cta/CtaWithIllustration";
 
 
 const postsPerPage = 3;
@@ -43,6 +44,7 @@ export default function Component() {
           <TopNav />
           <Topbar />
           <SimpleHeroWithImageAndCtaButtons />
+          <CtaWithIllustration />
         </Container>
 
       </Main>
