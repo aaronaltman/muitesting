@@ -18,6 +18,7 @@ import { BlogInfoFragment } from 'fragments/GeneralSettings';
 
 import AaronHeader from "../components/AaronHeader/AaronHeader";
 import AaronHeroNew from "../components/AaronHeroNew/AaronHeroNew";
+import TopNav from "../src/components/TopNav";
 
 const postsPerPage = 3;
 
@@ -40,6 +41,7 @@ export default function Component() {
 
       <AaronHeader menu={primaryMenu} />
       <AaronHeroNew />
+      <TopNav />
 
       <Main className={styles.home}>
         <div className="container">
