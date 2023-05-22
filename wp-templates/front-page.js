@@ -12,13 +12,7 @@ import {
 import { BlogInfoFragment } from 'fragments/GeneralSettings';
 import {Container} from "@mui/material";
 
-import TopNav from "../src/components/TopNav";
-
-import Topbar from '/src/layouts/Fixed/components/Topbar/Topbar.js';
-
-import SimpleHeroWithImageAndCtaButtons from "../src/blocks/heroes/SimpleHeroWithImageAndCtaButtons";
-import CtaWithIllustration from "../src/blocks/cta/CtaWithIllustration";
-
+import Elearning from '/src/views/Elearning';
 import Page from "/src/components/Page.js";
 
 
@@ -44,10 +38,7 @@ export default function Component() {
 
       <Main>
         <Container maxWidth={'xl'}>
-          <TopNav />
-          <Topbar />
-          <SimpleHeroWithImageAndCtaButtons />
-          <CtaWithIllustration />
+          <Elearning />
         </Container>
 
       </Main>
