@@ -41,7 +41,7 @@ export default function Component() {
   return (
     <>
       <SEO title={siteTitle} description={siteDescription} />
-<Container maxWidth={xl}>
+<Container maxWidth={'xl'}>
       <TopNav />
       <Topbar />
       <AaronHeroNew />
