@@ -5,7 +5,7 @@ import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
-import Container from 'components/Container';
+import Container from '/src/components/Container';
 
 const mock = {
   bgImage: 'https://assets.maccarianagency.com/backgrounds/img62.jpg',

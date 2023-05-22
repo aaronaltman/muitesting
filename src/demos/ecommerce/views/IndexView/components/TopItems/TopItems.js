@@ -7,6 +7,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
+import Image from 'next/Image';
 
 const mock = [
   {
@@ -57,7 +58,7 @@ const TopItems = () => {
             rows={isMd ? (i === 0 ? 2 : 1) : 1}
             sx={{ borderRadius: 2 }}
           >
-            <img
+            <Image
               src={item.image}
               alt={item.title}
               loading="lazy"

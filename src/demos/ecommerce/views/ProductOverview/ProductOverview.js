@@ -13,7 +13,8 @@ import {
 } from './components';
 
 import Main from '../../layouts/Main';
-import Container from 'components/Container';
+
+import Container from '/src/components/Container';
 
 const mock = {
   images: [

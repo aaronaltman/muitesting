@@ -8,8 +8,8 @@ import Link from '@mui/material/Link';
 import Divider from '@mui/material/Divider';
 import AppBar from '@mui/material/AppBar';
 
-import Container from 'components/Container';
-import TopNav from 'components/TopNav';
+import Container from '/src/components/Container';
+import TopNav from '/src/components/TopNav';
 
 import { Topbar, MobileMenu, Footer } from './components';
 
