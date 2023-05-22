@@ -87,7 +87,7 @@ const Fluid = ({
               color="primary"
               component="a"
               target="blank"
-              href="https://mui.com/store/items/the-front-landing-page/"
+              href="/the-front-landing-page/"
               size="large"
             >
               Buy now
