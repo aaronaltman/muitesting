@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import Image from 'next/Image';
+import Image from 'next/image'
 
 const Gallery = () => {
   const theme = useTheme();
