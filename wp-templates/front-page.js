@@ -17,10 +17,11 @@ import {
 import { BlogInfoFragment } from 'fragments/GeneralSettings';
 import {Container} from "@mui/material";
 
-import AaronHeroNew from "../components/AaronHeroNew/AaronHeroNew";
 import TopNav from "../src/components/TopNav";
 
 import Topbar from '/src/layouts/Fixed/components/Topbar/Topbar.js';
+
+import HeroWithIllustrationAndCta from "../components/Heroes";
 
 
 const postsPerPage = 3;
@@ -44,7 +45,7 @@ export default function Component() {
 <Container maxWidth={'xl'}>
       <TopNav />
       <Topbar />
-      <AaronHeroNew />
+      <HeroWithIllustrationAndCta />
 </Container>
 
       <Main className={styles.home}>
