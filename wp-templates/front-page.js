@@ -19,6 +19,8 @@ import Topbar from '/src/layouts/Fixed/components/Topbar/Topbar.js';
 import SimpleHeroWithImageAndCtaButtons from "../src/blocks/heroes/SimpleHeroWithImageAndCtaButtons";
 import CtaWithIllustration from "../src/blocks/cta/CtaWithIllustration";
 
+import Page from "/src/components/Page.js";
+
 
 const postsPerPage = 3;
 
@@ -37,6 +39,7 @@ export default function Component() {
 
   return (
     <>
+      <Page>
       <SEO title={siteTitle} description={siteDescription} />
 
       <Main>
@@ -49,6 +52,7 @@ export default function Component() {
 
       </Main>
       <Footer menuItems={footerMenu} />
+      </Page>
     </>
   );
 }
