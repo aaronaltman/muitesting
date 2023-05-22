@@ -1,13 +1,8 @@
 import * as MENUS from 'constants/menus';
 
 import { useQuery, gql } from '@apollo/client';
-import { FaArrowRight } from 'react-icons/fa';
-import styles from 'styles/pages/_Home.module.scss';
 import {
   Main,
-  Button,
-  Heading,
-  CTA,
   NavigationMenu,
   SEO,
   Footer,
@@ -43,45 +38,15 @@ export default function Component() {
   return (
     <>
       <SEO title={siteTitle} description={siteDescription} />
-<Container maxWidth={'xl'}>
-      <TopNav />
-      <Topbar />
-  <SimpleHeroWithImageAndCtaButtons />
-  <BlogCardsWithFullBackgroundImage />
-</Container>
 
-      <Main className={styles.home}>
-        <div className="container">
-          <section className={styles.posts}>
-            <Heading className={styles.heading} level="h2">
-              Latest Posts
-            </Heading>
-            <Posts posts={data.posts?.nodes} id="posts-list" />
-          </section>
-          <section className="cta">
-            <CTA
-              Button={() => (
-                <Button href="/posts">
-                  Get Started <FaArrowRight style={{ marginLeft: `1rem` }} />
-                </Button>
-              )}
-            >
-              <span>
-                Learn about Core Web Vitals and how Atlas can help you reach
-                your most demanding speed and user experience requirements.
-              </span>
-            </CTA>
-          </section>
-          <section className={styles.testimonials}>
-            <Heading className={styles.heading} level="h2">
-              Testimonials
-            </Heading>
-            <p className={styles.description}>
-              Here are just a few of the nice things our customers have to say.
-            </p>
-            <Testimonials testimonials={data?.testimonials?.nodes} />
-          </section>
-        </div>
+      <Main>
+        <Container maxWidth={'xl'}>
+          <TopNav />
+          <Topbar />
+          <SimpleHeroWithImageAndCtaButtons />
+          <BlogCardsWithFullBackgroundImage />
+        </Container>
+
       </Main>
       <Footer menuItems={footerMenu} />
     </>
