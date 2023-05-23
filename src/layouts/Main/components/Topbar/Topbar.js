@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
+import Typography from "@mui/material/Typography";
 
 
 const Topbar = ({ onSidebarOpen, }) => {
@@ -21,10 +22,18 @@ const Topbar = ({ onSidebarOpen, }) => {
                 href="/"
                 title="Headless WP Designs"
                 width={{ xs: 100, md: 300, lg:350 }}
-                color='secondary'
-                sx={{ fontSize:'16px' }}
             >
+                <Typography
+                    sx={{
+                        textTransform: 'uppercase',
+                        fontWeight: 'medium',
+                    }}
+                    gutterBottom
+                    color={'secondary'}
+                    align={'center'}
+                >
                         HEADLESS WORDPRESS
+                </Typography>
             </Box>
             <Box
                 display={'flex'}
