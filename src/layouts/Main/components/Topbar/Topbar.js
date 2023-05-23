@@ -21,10 +21,10 @@ const Topbar = ({ onSidebarOpen, }) => {
                 href="/"
                 title="Headless WP Designs"
                 width={{ xs: 100, md: 120}}
-                color={'secondary'}
-                sx={{ fontSize:'17px' }}
+                color='secondary'
+                sx={{ fontSize:'16px' }}
             >
-                        HEADLESS WP DESIGNS
+                        HEADLESS WORDPRESS
             </Box>
             <Box
                 display={'flex'}
