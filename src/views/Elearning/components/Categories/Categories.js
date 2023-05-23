@@ -222,7 +222,7 @@ const Categories = () => {
           color={'secondary'}
           align={'center'}
         >
-          Categories
+          WEBSITE TRANSFORMATION
         </Typography>
         <Typography
           variant="h4"
@@ -233,7 +233,7 @@ const Categories = () => {
             fontWeight: 700,
           }}
         >
-          Choose your course by categories
+          Transform Your Website into a Conversion Powerhouse.
         </Typography>
         <Typography
           variant="h6"
@@ -241,10 +241,12 @@ const Categories = () => {
           color={'text.secondary'}
           data-aos={'fade-up'}
         >
-          The best way to learn is by using skills.
+          In the digital world, proficiency and
+          application of the right techniques make all the difference.
           <br />
-          Browse the available course categories, choose your favourite one and
-          start learning.
+          Explore our optimization strategies,
+          pick what fits your brand, and pave the way for a
+          website that narrates your story while boosting conversions.
         </Typography>
       </Box>
       <Box>

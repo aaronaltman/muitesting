@@ -21,7 +21,8 @@ const Topbar = ({ onSidebarOpen, }) => {
                 href="/"
                 title="Headless WP Designs"
                 width={{ xs: 100, md: 120}}
-                sx={{ fontSize:'40px' }}
+                color={'secondary'}
+                sx={{ fontSize:'24px' }}
             >
                         HEADLESS WP DESIGNS
             </Box>
