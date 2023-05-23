@@ -7,6 +7,7 @@ import Main from '/src/layouts/Main/Main';
 import SimpleHeroWithImageAndCtaButtons from '/src/blocks/heroes/SimpleHeroWithImageAndCtaButtons';
 import CtaWithIllustration from '/src/blocks/cta/CtaWithIllustration/CtaWithIllustration.js';
 import Container from '/src/components/Container';
+import Contact from '/src/blocks/formLayouts/Contact/Contact.js';
 
 import {
   NavigationMenu,
@@ -44,6 +45,7 @@ export default function Component() {
         <Container>
         <Categories />
         </Container>
+        <Contact />
       </Main>
       </Page>
     </>
