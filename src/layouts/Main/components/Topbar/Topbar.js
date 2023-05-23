@@ -5,9 +5,7 @@ import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 
-import AaronsNavMenu from "/components/AaronsNavMenu/AaronsNavMenu";
-
-const Topbar = ({ onSidebarOpen, colorInvert = false, cx, navClasses, menuItems }) => {
+const Topbar = ({ onSidebarOpen, colorInvert = false }) => {
   const theme = useTheme();
   const { mode } = theme.palette;
   return (
@@ -39,11 +37,6 @@ const Topbar = ({ onSidebarOpen, colorInvert = false, cx, navClasses, menuItems 
             display={'flex'}
             width={{ xs: 100, md: 120 }}
         >
-          <AaronsNavMenu
-              id={cx('primary-navigation')}
-              className={navClasses}
-              menuItems={menuItems}
-          />
         </Box>
         <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
           <Box marginLeft={4}>
