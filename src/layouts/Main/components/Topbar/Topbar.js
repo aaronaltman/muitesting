@@ -5,13 +5,10 @@ import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import Typography from "@mui/material/Typography";
 
-import Page from '/src/components/Page';
-
 const Topbar = ({ onSidebarOpen, }) => {
     const theme = useTheme();
     //const { mode } = theme.palette;
     return (
-        <Page>
         <Box
             display={'flex'}
             justifyContent={'space-between'}
@@ -28,10 +25,10 @@ const Topbar = ({ onSidebarOpen, }) => {
                 <Typography
                     variant="h6"
                     component="div"
+                    color={"primary"}
                     sx={{
                         flexGrow: 1 ,
                         fontSize:'50px',
-                        color:'#333',
                         alignItems:'center',
                 }}
                 >
@@ -76,7 +73,6 @@ const Topbar = ({ onSidebarOpen, }) => {
                 </Button>
             </Box>
         </Box>
-        </Page>
     );
 };
 
