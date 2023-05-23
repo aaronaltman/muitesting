@@ -44,7 +44,7 @@ const SimpleHeroWithImageAndCtaButtons = () => {
             </Box>
             <Box marginBottom={3}>
               <Typography variant="h6" component="p" color="text.secondary">
-                World developers use our theFront theme to build their web
+                World companies use our services to build their web
                 applications.
                 <br />
                 Save yourself time and money.
