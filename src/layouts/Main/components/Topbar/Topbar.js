@@ -22,7 +22,7 @@ const Topbar = ({ onSidebarOpen, }) => {
                 title="Headless WP Designs"
                 width={{ xs: 100, md: 120}}
                 color={'secondary'}
-                sx={{ fontSize:'24px' }}
+                sx={{ fontSize:'17px' }}
             >
                         HEADLESS WP DESIGNS
             </Box>
