@@ -17,6 +17,8 @@ import { BlogInfoFragment } from 'fragments/GeneralSettings';
 
 import Page from "/src/components/Page.js";
 
+import {Container} from "@mui/material";
+
 //import {Container} from "@mui/material";
 
 
@@ -43,7 +45,9 @@ export default function Component() {
       <Main>
         <SimpleHeroWithImageAndCtaButtons />
         <CtaWithIllustration />
+        <Container maxWidth="lg">
         <Categories />
+        </Container>
       </Main>
       </Page>
     </>
