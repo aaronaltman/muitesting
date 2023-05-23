@@ -4,9 +4,9 @@ import { useQuery, gql } from '@apollo/client';
 
 import Categories from '/src/views/Elearning/components/Categories';
 import Topbar from '/src/layouts/Main/components/Topbar';
+import Main from '/src/layouts/Main/Main';
 
 import {
-  Main,
   NavigationMenu,
   SEO,
   Posts,
@@ -15,6 +15,8 @@ import {
 import { BlogInfoFragment } from 'fragments/GeneralSettings';
 
 import Page from "/src/components/Page.js";
+
+//import {Container} from "@mui/material";
 
 
 const postsPerPage = 3;
@@ -40,7 +42,6 @@ export default function Component() {
       <Main>
         <Topbar />
         <Categories />
-
       </Main>
       </Page>
     </>
