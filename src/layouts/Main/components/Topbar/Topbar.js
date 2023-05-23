@@ -20,7 +20,7 @@ const Topbar = ({ onSidebarOpen, }) => {
                 component="a"
                 href="/"
                 title="Headless WP Designs"
-                width={{ xs: 100, md: 120}}
+                width={{ xs: 100, md: 300, lg:350 }}
                 color='secondary'
                 sx={{ fontSize:'16px' }}
             >
