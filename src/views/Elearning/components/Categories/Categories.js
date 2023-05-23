@@ -12,8 +12,10 @@ import { colors } from '@mui/material';
 const mock = [
   {
     color: colors.lightBlue[500],
-    title: 'Web design',
-    subtitle: 'Choose thousands of Web design online course.',
+    title: 'Speed and Performance',
+    subtitle: 'Since the front-end is decoupled from the back-end, ' +
+        'the performance of the site improves significantly. ' +
+        'The user interface can load independently and faster, providing a much smoother user experience.',
     icon: (
       <svg
         height={24}
@@ -34,8 +36,9 @@ const mock = [
   },
   {
     color: colors.purple[500],
-    title: 'Business analytics',
-    subtitle: 'Choose thousands of Business analytics online course.',
+    title: 'Flexibility',
+    subtitle: 'Headless WordPress allows developers to build the front-end using any technology they want (like React, Vue.js, etc.). ' +
+        'This flexibility means you can customize your site exactly how you want it, not limited by traditional WordPress themes.',
     icon: (
       <svg
         height={24}
@@ -56,8 +59,9 @@ const mock = [
   },
   {
     color: colors.yellow[500],
-    title: 'Photography',
-    subtitle: 'Choose thousands of photography online course.',
+    title: 'Security',
+    subtitle: 'The separation between the front-end and the back-end increases security. In a headless architecture, ' +
+        'there is no direct link between the user interface and the database, making it harder for hackers to exploit the system.',
     icon: (
       <svg
         height={24}
@@ -84,8 +88,9 @@ const mock = [
   },
   {
     color: colors.indigo[500],
-    title: 'Video creating',
-    subtitle: 'Choose thousands of Video creating online course.',
+    title: 'Scalability',
+    subtitle: 'Since the front and back ends are separate, they can be scaled independently based on demand. For example, ' +
+        'if you\'re expecting a surge in user traffic, you can scale up the front-end resources without touching the back-end.',
     icon: (
       <svg
         height={24}
@@ -106,8 +111,9 @@ const mock = [
   },
   {
     color: colors.red[500],
-    title: 'Health & fitness',
-    subtitle: 'Choose thousands of Health & fitness online course.',
+    title: 'Omnichannel Readiness',
+    subtitle: ' With headless WordPress, you can deliver content not just to your website, but to any device or channel (like mobile apps, IoT devices, etc.), ' +
+        'all from the same back-end. This makes it an ideal solution for businesses looking for an omnichannel strategy.',
     icon: (
       <svg
         height={24}
@@ -128,8 +134,9 @@ const mock = [
   },
   {
     color: colors.green[500],
-    title: 'Marketing',
-    subtitle: 'Choose thousands of marketing online course.',
+    title: 'Future-Proof',
+    subtitle: 'As new technologies emerge, a headless architecture allows you to adapt quickly. You can update or ' +
+        'change the front-end technology without impacting the back-end, ensuring your website stays up-to-date with current trends.',
     icon: (
       <svg
         height={24}
@@ -156,8 +163,9 @@ const mock = [
   },
   {
     color: colors.orange[500],
-    title: 'Finances & sales',
-    subtitle: 'Choose thousands of finaces & sales online course.',
+    title: 'Better Developer Experience',
+    subtitle: 'Developers aren\'t confined by the traditional WordPress architecture, allowing them to use more modern, ' +
+        'efficient technologies and methodologies. This can improve the development process and lead to better end products.',
     icon: (
       <svg
         height={24}
@@ -178,8 +186,9 @@ const mock = [
   },
   {
     color: colors.deepPurple[500],
-    title: 'Graphic design',
-    subtitle: 'Choose thousands of Graphic design online course.',
+    title: 'Improved SEO',
+    subtitle: 'Headless WordPress sites, especially when built with modern JavaScript frameworks, can offer improved SEO performance. ' +
+        'Faster load times, mobile-first design, and dynamic rendering capabilities can all contribute to better search engine rankings.',
     icon: (
       <svg
         height={24}
