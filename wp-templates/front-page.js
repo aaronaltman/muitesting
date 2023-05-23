@@ -3,7 +3,6 @@ import * as MENUS from 'constants/menus';
 import { useQuery, gql } from '@apollo/client';
 
 import Categories from '/src/views/Elearning/components/Categories';
-import Topbar from '/src/layouts/Main/components/Topbar';
 import Main from '/src/layouts/Main/Main';
 
 import {
@@ -40,7 +39,6 @@ export default function Component() {
       <SEO title={siteTitle} description={siteDescription} />
 
       <Main>
-        <Topbar />
         <Categories />
       </Main>
       </Page>
