@@ -25,7 +25,12 @@ const Topbar = ({ onSidebarOpen, }) => {
                 <Typography
                     variant="h6"
                     component="div"
-                    sx={{ flexGrow: 1 }}
+                    sx={{
+                        flexGrow: 1 ,
+                        fontSize:'30px',
+                        color:'#333',
+                        alignItems:'center',
+                }}
                 >
                     Headless WP
                 </Typography>
