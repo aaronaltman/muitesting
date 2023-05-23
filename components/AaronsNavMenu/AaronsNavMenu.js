@@ -1,6 +1,8 @@
 import { gql } from '@apollo/client';
 import Link from 'next/link';
 
+
+
 export default function AaronsNavMenu({ menuItems, className, children }) {
     if (!menuItems) {
         return null;

@@ -7,77 +7,82 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import AaronsNavMenu from "/components/AaronsNavMenu/AaronsNavMenu";
 
-const Topbar = ({ onSidebarOpen, colorInvert = false }) => {
+const Topbar = ({ onSidebarOpen, colorInvert = false, cx, navClasses, menuItems }) => {
   const theme = useTheme();
   const { mode } = theme.palette;
   return (
-    <Box
-      display={'flex'}
-      justifyContent={'space-between'}
-      alignItems={'center'}
-      width={1}
-    >
-      <Box
-        display={'flex'}
-        component="a"
-        href="/"
-        title="theFront"
-        width={{ xs: 100, md: 120 }}
-      >
-        <Box
-          component={'img'}
-          src={
-            mode === 'light' && !colorInvert
-              ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-              : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-          }
-          height={1}
-          width={1}
-        />
-      </Box>
       <Box
           display={'flex'}
-          width={{ xs: 100, md: 120 }}
+          justifyContent={'space-between'}
+          alignItems={'center'}
+          width={1}
       >
-        <AaronsNavMenu />
-      </Box>
-
-      <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        <Box marginLeft={4}>
-          <Button
-            variant="contained"
-            color="primary"
+        <Box
+            display={'flex'}
             component="a"
-            target="blank"
-            href="https://mui.com/store/items/the-front-landing-page/"
-            size="large"
+            href="/"
+            title="theFront"
+            width={{ xs: 100, md: 120 }}
+        >
+          <Box
+              component={'img'}
+              src={
+                mode === 'light' && !colorInvert
+                    ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
+                    : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
+              }
+              height={1}
+              width={1}
+          />
+        </Box>
+        <Box
+            display={'flex'}
+            width={{ xs: 100, md: 120 }}
+        >
+          <AaronsNavMenu
+              id={cx('primary-navigation')}
+              className={navClasses}
+              menuItems={menuItems}
+          />
+        </Box>
+        <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
+          <Box marginLeft={4}>
+            <Button
+                variant="contained"
+                color="primary"
+                component="a"
+                target="blank"
+                href="https://mui.com/store/items/the-front-landing-page/"
+                size="large"
+            >
+              Buy now
+            </Button>
+          </Box>
+        </Box>
+        <Box sx={{ display: { xs: 'block', md: 'none' } }} alignItems={'center'}>
+          <Button
+              onClick={() => onSidebarOpen()}
+              aria-label="Menu"
+              variant={'outlined'}
+              sx={{
+                borderRadius: 2,
+                minWidth: 'auto',
+                padding: 1,
+                borderColor: alpha(theme.palette.divider, 0.2),
+              }}
           >
-            Buy now
+            <MenuIcon />
           </Button>
         </Box>
       </Box>
-      <Box sx={{ display: { xs: 'block', md: 'none' } }} alignItems={'center'}>
-        <Button
-          onClick={() => onSidebarOpen()}
-          aria-label="Menu"
-          variant={'outlined'}
-          sx={{
-            borderRadius: 2,
-            minWidth: 'auto',
-            padding: 1,
-            borderColor: alpha(theme.palette.divider, 0.2),
-          }}
-        >
-          <MenuIcon />
-        </Button>
-      </Box>
-    </Box>
   );
 };
 
 Topbar.propTypes = {
   onSidebarOpen: PropTypes.func,
-  pages: PropTypes.object,
+  cx: PropTypes.func,
+  navClasses: PropTypes.string,
+  menuItems: PropTypes.array,
   colorInvert: PropTypes.bool,
 };
 
