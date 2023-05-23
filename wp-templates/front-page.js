@@ -5,6 +5,7 @@ import { useQuery, gql } from '@apollo/client';
 import Categories from '/src/views/Elearning/components/Categories';
 import Main from '/src/layouts/Main/Main';
 import SimpleHeroWithImageAndCtaButtons from '/src/blocks/heroes/SimpleHeroWithImageAndCtaButtons';
+import CtaWithIllustration from '/src/blocks/cta/CtaWithIllustration/CtaWithIllustration.js';
 
 import {
   NavigationMenu,
@@ -41,6 +42,7 @@ export default function Component() {
 
       <Main>
         <SimpleHeroWithImageAndCtaButtons />
+        <CtaWithIllustration />
         <Categories />
       </Main>
       </Page>
