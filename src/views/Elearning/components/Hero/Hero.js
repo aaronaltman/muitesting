@@ -30,7 +30,7 @@ const Hero = () => {
             )} 0%)`,
           }}
         >
-          Learn new skills,
+          Stand out from the crowd,
         </Typography>
         <Typography variant="h3" color="text.primary" sx={{ fontWeight: 700 }}>
           gain more experience
