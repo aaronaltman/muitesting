@@ -27,9 +27,10 @@ const Topbar = ({ onSidebarOpen, }) => {
                     sx={{
                         textTransform: 'uppercase',
                         fontWeight: 'medium',
+                        fontSize:'24px',
                     }}
                     gutterBottom
-                    color={'secondary'}
+                    color={'text.primary'}
                     align={'center'}
                 >
                         HEADLESS WORDPRESS
