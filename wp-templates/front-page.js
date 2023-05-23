@@ -1,6 +1,10 @@
 import * as MENUS from 'constants/menus';
 
 import { useQuery, gql } from '@apollo/client';
+
+import Categories from '/src/views/Elearning/components/Categories';
+import Topbar from '/src/layouts/Main/components/Topbar';
+
 import {
   Main,
   NavigationMenu,
@@ -10,7 +14,6 @@ import {
 } from 'components';
 import { BlogInfoFragment } from 'fragments/GeneralSettings';
 
-import Elearning from '/src/views/Elearning';
 import Page from "/src/components/Page.js";
 
 
@@ -35,7 +38,8 @@ export default function Component() {
       <SEO title={siteTitle} description={siteDescription} />
 
       <Main>
-          <Elearning />
+        <Topbar />
+        <Categories />
 
       </Main>
       </Page>
