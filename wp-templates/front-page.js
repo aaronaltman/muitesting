@@ -6,6 +6,7 @@ import Categories from '/src/views/Elearning/components/Categories';
 import Main from '/src/layouts/Main/Main';
 import SimpleHeroWithImageAndCtaButtons from '/src/blocks/heroes/SimpleHeroWithImageAndCtaButtons';
 import CtaWithIllustration from '/src/blocks/cta/CtaWithIllustration/CtaWithIllustration.js';
+import Container from '/src/components/Container';
 
 import {
   NavigationMenu,
@@ -16,11 +17,6 @@ import {
 import { BlogInfoFragment } from 'fragments/GeneralSettings';
 
 import Page from "/src/components/Page.js";
-
-import {Container} from "@mui/material";
-
-//import {Container} from "@mui/material";
-
 
 const postsPerPage = 3;
 
@@ -45,7 +41,7 @@ export default function Component() {
       <Main>
         <SimpleHeroWithImageAndCtaButtons />
         <CtaWithIllustration />
-        <Container maxWidth="lg">
+        <Container>
         <Categories />
         </Container>
       </Main>
