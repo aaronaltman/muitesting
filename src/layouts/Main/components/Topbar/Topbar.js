@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-import Typography from "@mui/material/Typography";
+import Link from '@mui/material/Link';
 
 const Topbar = ({ onSidebarOpen, }) => {
     const theme = useTheme();
@@ -22,18 +22,11 @@ const Topbar = ({ onSidebarOpen, }) => {
                 title="theFront"
                 width={{ xs: 100, md: 120 }}
             >
-                <Typography
-                    variant="h6"
-                    component="div"
-                    color={"primary"}
-                    sx={{
-                        flexGrow: 1 ,
-                        fontSize:'50px',
-                        alignItems:'center',
-                }}
-                >
-                    Headless WP
-                </Typography>
+                <Box marginLeft={3}>
+                    <Link underline="none" component="a" href="/" color="text.primary">
+                        HEADLESS WP DESIGNS
+                    </Link>
+                </Box>
             </Box>
             <Box
                 display={'flex'}
