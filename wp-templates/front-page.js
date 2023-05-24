@@ -12,8 +12,6 @@ import {
 } from 'components';
 import { BlogInfoFragment } from 'fragments/GeneralSettings';
 
-import AaronTailwindHero from "/components/AaronTailwindHero/AaronTailwindHero";
-
 
 const postsPerPage = 3;
 
@@ -34,7 +32,6 @@ export default function Component() {
       <>
         <SEO title={siteTitle} description={siteDescription} />
         <Page>
-<AaronTailwindHero/>
         </Page>
       </>
   );
