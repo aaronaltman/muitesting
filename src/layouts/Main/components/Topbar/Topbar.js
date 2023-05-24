@@ -1,14 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-import Typography from "@mui/material/Typography";
 
+import { NavItem } from '/src/layouts/Main/components/Topbar/components/NavItem';
 
-const Topbar = ({ onSidebarOpen, }) => {
+const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
     const theme = useTheme();
-    //const { mode } = theme.palette;
+    const { mode } = theme.palette;
+    const {
+        landings: landingPages,
+        secondary: secondaryPages,
+        company: companyPages,
+        account: accountPages,
+        portfolio: portfolioPages,
+        blog: blogPages,
+    } = pages;
+
     return (
         <Box
             display={'flex'}
@@ -20,27 +30,69 @@ const Topbar = ({ onSidebarOpen, }) => {
                 display={'flex'}
                 component="a"
                 href="/"
-                title="Headless WP Designs"
-                width={{ xs: 100, md: 300, lg:350 }}
+                title="theFront"
+                width={{ xs: 100, md: 120 }}
             >
-                <Typography
-                    sx={{
-                        textTransform: 'uppercase',
-                        fontWeight: 'medium',
-                        fontSize:'24px',
-                    }}
-                    gutterBottom
-                    color={'text.primary'}
-                    align={'center'}
-                >
-                        HEADLESS WORDPRESS
-                </Typography>
+                <Box
+                    component={'img'}
+                    src={
+                        mode === 'light' && !colorInvert
+                            ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
+                            : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
+                    }
+                    height={1}
+                    width={1}
+                />
             </Box>
-            <Box
-                display={'flex'}
-                alignItems={'center'}
-                sx={{ display: { xs: 'none', md: 'flex' } }}
-            >
+            <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
+                <Box>
+                    <NavItem
+                        title={'Landings'}
+                        id={'landing-pages'}
+                        items={landingPages}
+                        colorInvert={colorInvert}
+                    />
+                </Box>
+                <Box marginLeft={4}>
+                    <NavItem
+                        title={'Company'}
+                        id={'company-pages'}
+                        items={companyPages}
+                        colorInvert={colorInvert}
+                    />
+                </Box>
+                <Box marginLeft={4}>
+                    <NavItem
+                        title={'Account'}
+                        id={'account-pages'}
+                        items={accountPages}
+                        colorInvert={colorInvert}
+                    />
+                </Box>
+                <Box marginLeft={4}>
+                    <NavItem
+                        title={'Pages'}
+                        id={'secondary-pages'}
+                        items={secondaryPages}
+                        colorInvert={colorInvert}
+                    />
+                </Box>
+                <Box marginLeft={4}>
+                    <NavItem
+                        title={'Blog'}
+                        id={'blog-pages'}
+                        items={blogPages}
+                        colorInvert={colorInvert}
+                    />
+                </Box>
+                <Box marginLeft={4}>
+                    <NavItem
+                        title={'Portfolio'}
+                        id={'portfolio-pages'}
+                        items={portfolioPages}
+                        colorInvert={colorInvert}
+                    />
+                </Box>
                 <Box marginLeft={4}>
                     <Button
                         variant="contained"
@@ -50,15 +102,11 @@ const Topbar = ({ onSidebarOpen, }) => {
                         href="https://mui.com/store/items/the-front-landing-page/"
                         size="large"
                     >
-                        CONTACT US TODAY
+                        Buy now
                     </Button>
                 </Box>
             </Box>
-            <Box
-                display={'flex'}
-                alignItems={'center'}
-                sx={{ display: { xs: 'block', md: 'none' } }}
-            >
+            <Box sx={{ display: { xs: 'block', md: 'none' } }} alignItems={'center'}>
                 <Button
                     onClick={() => onSidebarOpen()}
                     aria-label="Menu"
@@ -75,6 +123,12 @@ const Topbar = ({ onSidebarOpen, }) => {
             </Box>
         </Box>
     );
+};
+
+Topbar.propTypes = {
+    onSidebarOpen: PropTypes.func,
+    pages: PropTypes.object,
+    colorInvert: PropTypes.bool,
 };
 
 export default Topbar;
