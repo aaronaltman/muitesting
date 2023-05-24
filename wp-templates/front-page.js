@@ -7,7 +7,9 @@ import SimpleHeroWithImageAndCtaButtons from '/src/blocks/heroes/SimpleHeroWithI
 import CtaWithIllustration from '/src/blocks/cta/CtaWithIllustration/CtaWithIllustration.js';
 import Container from '/src/components/Container';
 import Contact from '/src/blocks/formLayouts/Contact';
-import Main from '/src/layouts/Main/Main';
+import TopNav from '/src/components/TopNav';
+import Topbar from '/src/layouts/Fixed/components/Topbar';
+import Page from '/src/components/Page';
 
 import {
   NavigationMenu,
@@ -29,22 +31,24 @@ export default function Component() {
   }
 
   const { title: siteTitle, description: siteDescription } =
-    data?.generalSettings;
+      data?.generalSettings;
   //const primaryMenu = data?.headerMenuItems?.nodes ?? [];
   //const footerMenu = data?.footerMenuItems?.nodes ?? [];
 
   return (
-    <>
-      <SEO title={siteTitle} description={siteDescription} />
-        <Main>
-        <SimpleHeroWithImageAndCtaButtons />
-        <CtaWithIllustration />
-        <Container>
-        <Categories />
-        </Container>
-        <Contact />
-        </Main>
-    </>
+      <>
+        <SEO title={siteTitle} description={siteDescription} />
+        <Page>
+          <TopNav/>
+          <Topbar/>
+          <SimpleHeroWithImageAndCtaButtons />
+          <CtaWithIllustration />
+          <Container>
+            <Categories />
+          </Container>
+          <Contact />
+        </Page>
+      </>
   );
 }
 
