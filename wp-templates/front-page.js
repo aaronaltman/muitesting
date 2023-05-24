@@ -7,7 +7,7 @@ import SimpleHeroWithImageAndCtaButtons from '/src/blocks/heroes/SimpleHeroWithI
 import CtaWithIllustration from '/src/blocks/cta/CtaWithIllustration/CtaWithIllustration.js';
 import Container from '/src/components/Container';
 import Contact from '/src/blocks/formLayouts/Contact';
-import Main from '/src/layouts/Main';
+import Main from '/src/layouts/Main/Main';
 
 import {
   NavigationMenu,
