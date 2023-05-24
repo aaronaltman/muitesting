@@ -50,7 +50,7 @@ const Topbar = ({ onSidebarOpen, }) => {
                         href="https://mui.com/store/items/the-front-landing-page/"
                         size="large"
                     >
-                        Buy now
+                        CONTACT US TODAY
                     </Button>
                 </Box>
             </Box>

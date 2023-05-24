@@ -36,7 +36,7 @@ export default function Component() {
   return (
     <>
       <SEO title={siteTitle} description={siteDescription} />
-
+<Container>
       <Main>
         <SimpleHeroWithImageAndCtaButtons />
         <CtaWithIllustration />
@@ -45,6 +45,7 @@ export default function Component() {
         </Container>
         <Contact />
       </Main>
+</Container>
     </>
   );
 }
