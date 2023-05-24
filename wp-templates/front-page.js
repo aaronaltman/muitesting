@@ -8,7 +8,7 @@ import CtaWithIllustration from '/src/blocks/cta/CtaWithIllustration/CtaWithIllu
 import Container from '/src/components/Container';
 import Contact from '/src/blocks/formLayouts/Contact';
 import TopNav from '/src/components/TopNav';
-import Topbar from '/src/layouts/Fixed/components/Topbar';
+import Topbar from '/src/layouts/Main/components/Topbar/Topbar';
 import Page from '/src/components/Page';
 
 import {
