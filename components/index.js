@@ -23,8 +23,10 @@ import SearchInput from './SearchInput';
 import SearchResults from './SearchResults';
 import LoadingSearchResult from './LoadingSearchResult';
 import SearchRecommendations from './SearchRecommendations';
+import AaronTailwindHero from "./AaronTailwindHero/AaronTailwindHero";
 
 export {
+  AaronTailwindHero,
   Button,
   ContentWrapper,
   CTA,

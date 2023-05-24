@@ -2,13 +2,6 @@ import * as MENUS from 'constants/menus';
 
 import { useQuery, gql } from '@apollo/client';
 
-import Categories from '/src/views/Elearning/components/Categories';
-import SimpleHeroWithImageAndCtaButtons from '/src/blocks/heroes/SimpleHeroWithImageAndCtaButtons';
-import CtaWithIllustration from '/src/blocks/cta/CtaWithIllustration/CtaWithIllustration.js';
-import Container from '/src/components/Container';
-import Contact from '/src/blocks/formLayouts/Contact';
-import TopNav from '/src/components/TopNav';
-import Topbar from '/src/layouts/Main/components/Topbar/Topbar';
 import Page from '/src/components/Page';
 
 import {
@@ -18,6 +11,8 @@ import {
   Testimonials,
 } from 'components';
 import { BlogInfoFragment } from 'fragments/GeneralSettings';
+
+import AaronTailwindHero from "/components/AaronTailwindHero/AaronTailwindHero";
 
 
 const postsPerPage = 3;
@@ -39,14 +34,7 @@ export default function Component() {
       <>
         <SEO title={siteTitle} description={siteDescription} />
         <Page>
-          <TopNav/>
-          <Topbar/>
-          <SimpleHeroWithImageAndCtaButtons />
-          <CtaWithIllustration />
-          <Container>
-            <Categories />
-          </Container>
-          <Contact />
+<AaronTailwindHero/>
         </Page>
       </>
   );
