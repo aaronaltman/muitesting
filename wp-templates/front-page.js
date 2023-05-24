@@ -7,8 +7,6 @@ import SimpleHeroWithImageAndCtaButtons from '/src/blocks/heroes/SimpleHeroWithI
 import CtaWithIllustration from '/src/blocks/cta/CtaWithIllustration/CtaWithIllustration.js';
 import Container from '/src/components/Container';
 import Contact from '/src/blocks/formLayouts/Contact';
-import TopNav from '/src/components/TopNav';
-import Topbar from '/src/layouts/Fixed/components/Topbar';
 import Main from '/src/layouts/Main';
 
 import {
@@ -39,8 +37,6 @@ export default function Component() {
     <>
       <SEO title={siteTitle} description={siteDescription} />
         <Main>
-       <TopNav/>
-        <Topbar/>
         <SimpleHeroWithImageAndCtaButtons />
         <CtaWithIllustration />
         <Container>
