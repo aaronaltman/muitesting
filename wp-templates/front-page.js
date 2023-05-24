@@ -9,6 +9,7 @@ import Container from '/src/components/Container';
 import Contact from '/src/blocks/formLayouts/Contact';
 import TopNav from '/src/components/TopNav';
 import Topbar from '/src/layouts/Fixed/components/Topbar';
+import Page from '/src/components/Page';
 
 import {
   NavigationMenu,
@@ -37,6 +38,7 @@ export default function Component() {
   return (
     <>
       <SEO title={siteTitle} description={siteDescription} />
+        <Page>
        <TopNav/>
         <Topbar/>
         <SimpleHeroWithImageAndCtaButtons />
@@ -45,6 +47,7 @@ export default function Component() {
         <Categories />
         </Container>
         <Contact />
+        </Page>
     </>
   );
 }
