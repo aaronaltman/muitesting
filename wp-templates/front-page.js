@@ -3,7 +3,6 @@ import * as MENUS from 'constants/menus';
 import { useQuery, gql } from '@apollo/client';
 
 import Categories from '/src/views/Elearning/components/Categories';
-import Main from '/src/layouts/Main/Main';
 import SimpleHeroWithImageAndCtaButtons from '/src/blocks/heroes/SimpleHeroWithImageAndCtaButtons';
 import CtaWithIllustration from '/src/blocks/cta/CtaWithIllustration/CtaWithIllustration.js';
 import Container from '/src/components/Container';
@@ -36,16 +35,13 @@ export default function Component() {
   return (
     <>
       <SEO title={siteTitle} description={siteDescription} />
-<Container>
-      <Main>
+
         <SimpleHeroWithImageAndCtaButtons />
         <CtaWithIllustration />
         <Container>
         <Categories />
         </Container>
         <Contact />
-      </Main>
-</Container>
     </>
   );
 }
