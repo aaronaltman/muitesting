@@ -17,7 +17,6 @@ import {
 } from 'components';
 import { BlogInfoFragment } from 'fragments/GeneralSettings';
 
-import Page from "/src/components/Page.js";
 
 const postsPerPage = 3;
 
@@ -36,7 +35,6 @@ export default function Component() {
 
   return (
     <>
-      <Page>
       <SEO title={siteTitle} description={siteDescription} />
 
       <Main>
@@ -47,7 +45,6 @@ export default function Component() {
         </Container>
         <Contact />
       </Main>
-      </Page>
     </>
   );
 }
