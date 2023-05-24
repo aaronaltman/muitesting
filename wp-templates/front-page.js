@@ -7,6 +7,7 @@ import SimpleHeroWithImageAndCtaButtons from '/src/blocks/heroes/SimpleHeroWithI
 import CtaWithIllustration from '/src/blocks/cta/CtaWithIllustration/CtaWithIllustration.js';
 import Container from '/src/components/Container';
 import Contact from '/src/blocks/formLayouts/Contact';
+import TopNav from '/src/components/TopNav';
 
 import {
   NavigationMenu,
@@ -35,7 +36,7 @@ export default function Component() {
   return (
     <>
       <SEO title={siteTitle} description={siteDescription} />
-
+       <TopNav/>
         <SimpleHeroWithImageAndCtaButtons />
         <CtaWithIllustration />
         <Container>
